@@ -33,10 +33,15 @@ namespace DesignPatterns.Creation_Design_Pattern
     {
         public static IProduct GetProduct(string type)
         {
-            if(type == "BlackWhitePrinter")
+            if (type == "BlackWhitePrinter")
                 return new BlackWhitePrinter();
-            else
+            else if (type == "ColourPrinter")
                 return new ColourPrinter();
+            else
+            {
+                Console.WriteLine("Invalid Product");
+                return null;
+            }
         }
 
     }
